@@ -58,7 +58,8 @@ launch: function() {
         var posts = [];
         _.each(data, function(post) {
             var text = post.get('Text');
-            if (text.indexOf("associated to Salesforce")>=0) {
+            //if (text.indexOf("associated to Salesforce")>=0) { //uncomment this line and comment out the line below if you want to include stories
+            if ((_.contains(post.get('Artifact')._ref ,"defect")) && (text.indexOf("associated to Salesforce")>=0)) {
                 text = text.match(/(<[Aa]\s(.*)<\/[Aa]>)/g);
                 var p  = {
                     Case: text,
