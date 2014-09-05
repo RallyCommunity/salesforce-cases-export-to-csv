@@ -1,4 +1,4 @@
-salesforce cases
+Salesforce cases linked to Rally defects last updated within 90 days
 =========================
 
 ## Overview
